@@ -1,0 +1,8 @@
+{% extends 'dash.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{{ form|crispy }}
+<button type="submit" class="btn btn-outline-info">Submit</button>
+{% endblock %}

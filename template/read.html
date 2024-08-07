@@ -1,0 +1,33 @@
+{% extends 'dash.html' %}
+
+{% block content %}
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">sl no</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Plans</th>
+          <th scope="col">Price</th>
+          <th scope="col">Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in info %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+
+            <td>{{i.name}}</td>
+            <td>{{ i.age }}</td>
+            <td>{{i.plans}}</td>
+            <td>{{i.price}}</td>
+           <td>{{i.duration}}</td>
+
+
+    </tr>
+  </tbody>
+
+    {% endfor %}
+</table>
+{% endblock %}
